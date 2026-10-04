@@ -1,21 +1,3 @@
-from pathlib import Path
-from PIL import Image
-import shutil, zipfile, textwrap, os
-
-base = Path("/mnt/data/cardiorisk_readme_update")
-img_dir = base / "docs" / "images"
-img_dir.mkdir(parents=True, exist_ok=True)
-
-source_images = [
-    ("/mnt/data/image(20261004-160607).png", "dashboard.png"),
-    ("/mnt/data/image(20261004-160720).png", "dashboard-inputs.png"),
-    ("/mnt/data/image(20261004-160724).png", "model-performance.png"),
-    ("/mnt/data/image(20261004-160730).png", "model-analysis.png"),
-]
-for src, name in source_images:
-    shutil.copy2(src, img_dir / name)
-
-readme = r'''# ❤️ CardioRisk AI
 ### Predicting the Future. Understanding the Risk.
 
 **An end-to-end machine learning system for 10-year coronary heart disease (CHD) risk prediction.**
