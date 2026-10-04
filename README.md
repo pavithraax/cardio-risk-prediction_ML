@@ -205,13 +205,3 @@ jupyter notebook notebooks/
 - Framingham Heart Study dataset.
 - Nguyen, CS229 (2019) — reference methodology used in the project.
 '''
-(base / "README.md").write_text(readme, encoding="utf-8")
-
-zip_path = Path("/mnt/data/cardiorisk_readme_update.zip")
-with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-    for p in base.rglob("*"):
-        if p.is_file():
-            z.write(p, p.relative_to(base.parent))
-print("Created README and 4 screenshot assets.")
-print(f"README: {base / 'README.md'}")
-print(f"ZIP: {zip_path}")
