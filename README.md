@@ -1,4 +1,4 @@
-### Predicting the Future. Understanding the Risk.
+### Predicting the Future. Understanding the Risk !
 
 **An end-to-end machine learning system for 10-year coronary heart disease (CHD) risk prediction.**
 
